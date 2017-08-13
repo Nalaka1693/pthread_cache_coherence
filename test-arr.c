@@ -6,27 +6,38 @@
 #define ITE 5000
 #define MAX 3000000
 
-const char *align[11] = {"at", "at4", "at8", "at16", "at32", "at64", "at128", "at256", "at512", "at1024", "at2048"};
-int var_array[10][1000] = { };
+const char *align[11] = {"at4 ", "at8 ", "at16", "at32", "at64", "at128", "at256", "at512", "at1024", "at2048", "NULL"};
+int var_array32[10][1024] __attribute__ ((aligned(32)));
+int var_array64[10][1024] __attribute__ ((aligned(64)));
+int var_array128[10][1024] __attribute__ ((aligned(128)));
 
+int get_time(int [][1024]);
 void main_pthread(int *, int *);
 void *counting_thread(void *);
 
 int main() {
+    get_time(var_array32);
+    get_time(var_array64);
+    get_time(var_array128);
+
+    return 0;
+}
+
+int get_time(int arr[][1024]) {
     struct timeval start, end;
     struct timezone z;
     long int total;
-    int a = 1, i = 1, j, k;
+    int a = 1, i = 0, j, k;
 
-    for (k = 0; k < 10; k++) {
+    for (k = 0; k < 9; k++) {
         for (total = 0, j = 0; j < ITE; j++) {
             if (gettimeofday(&start, &z)) goto error_exit;
-            main_pthread(&var_array[k][0], &var_array[k][a]);   // make sure it exits only after completing
+            main_pthread(&arr[k][0], &arr[k][a]);   // make sure it exits only after completing
             if (gettimeofday(&end, &z)) goto error_exit;
             total += GET_US(end) - GET_US(start);
         }
         printf("%s\t(%d and %d)\tdiff = %d\tAvg=%ld\n", align[i++],
-               (int) &var_array[k][0], (int) &var_array[k][a], (int) &var_array[k][a] - (int) &var_array[k][0], total / j);
+               (int) &arr[k][0], (int) &arr[k][a], (int) &arr[k][a] - (int) &arr[k][0], total / j);
         a = a * 2;
     }
 

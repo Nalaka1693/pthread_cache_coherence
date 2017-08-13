@@ -11,29 +11,37 @@ u32     (4259200 and 4259204)   diff = 4        Avg=14013
 u64     (4259520 and 4259524)   diff = 4        Avg=14141
 NULL    (0 and 0)               diff = 0        Avg=9641
 
-at      (4258820 and 4259332)   diff = 512      Avg=9454
-at4     (4258824 and 4259092)   diff = 268      Avg=9410
-at8     (4258888 and 4259144)   diff = 256      Avg=9425
-at16    (4259088 and 4259104)   diff = 16       Avg=14888
-at32    (4258816 and 4259168)   diff = 352      Avg=9410
-at64    (4258880 and 4259136)   diff = 256      Avg=9419
-at128   (4259456 and 4259584)   diff = 128      Avg=9525
-at256   (4259072 and 4259328)   diff = 256      Avg=9428
-u32     (4259200 and 4259204)   diff = 4        Avg=14647
-u64     (4259520 and 4259524)   diff = 4        Avg=14594
-NULL    (0 and 0)               diff = 0        Avg=9844
-
 arr ======================
-at4     (4255808 and 4255812)   diff = 4        Avg=13865
-at8     (4259808 and 4259816)   diff = 8        Avg=13882
-at16    (4263808 and 4263824)   diff = 16       Avg=13554
-at32    (4267808 and 4267840)   diff = 32       Avg=9348
-at64    (4271808 and 4271872)   diff = 64       Avg=9335
-at128   (4275808 and 4275936)   diff = 128      Avg=9338
-at256   (4279808 and 4280064)   diff = 256      Avg=9357
-at512   (4283808 and 4284320)   diff = 512      Avg=9382
-at1024  (4287808 and 4288832)   diff = 1024     Avg=9372
-at2048  (4291808 and 4293856)   diff = 2048     Avg=9375
-at2048  (0 and 0)               diff = 0        Avg=9828
+at4     (4258688 and 4258692)   diff = 4        Avg=14436
+at8     (4262784 and 4262792)   diff = 8        Avg=14261
+at16    (4266880 and 4266896)   diff = 16       Avg=14499
+at32    (4270976 and 4271008)   diff = 32       Avg=14509
+at64    (4275072 and 4275136)   diff = 64       Avg=9264
+at128   (4279168 and 4279296)   diff = 128      Avg=9269
+at256   (4283264 and 4283520)   diff = 256      Avg=9303
+at512   (4287360 and 4287872)   diff = 512      Avg=9268
+at1024  (4291456 and 4292480)   diff = 1024     Avg=9279
+NULL    (0 and 0)               diff = 0        Avg=9858
 
+at4     (4340608 and 4340612)   diff = 4        Avg=14499
+at8     (4344704 and 4344712)   diff = 8        Avg=14461
+at16    (4348800 and 4348816)   diff = 16       Avg=14250
+at32    (4352896 and 4352928)   diff = 32       Avg=14282
+at64    (4356992 and 4357056)   diff = 64       Avg=9282
+at128   (4361088 and 4361216)   diff = 128      Avg=9290
+at256   (4365184 and 4365440)   diff = 256      Avg=9357
+at512   (4369280 and 4369792)   diff = 512      Avg=9318
+at1024  (4373376 and 4374400)   diff = 1024     Avg=9300
+NULL    (0 and 0)               diff = 0        Avg=9894
+
+at4     (4299648 and 4299652)   diff = 4        Avg=14532
+at8     (4303744 and 4303752)   diff = 8        Avg=14461
+at16    (4307840 and 4307856)   diff = 16       Avg=14222
+at32    (4311936 and 4311968)   diff = 32       Avg=14262
+at64    (4316032 and 4316096)   diff = 64       Avg=9266
+at128   (4320128 and 4320256)   diff = 128      Avg=9316
+at256   (4324224 and 4324480)   diff = 256      Avg=9304
+at512   (4328320 and 4328832)   diff = 512      Avg=9325
+at1024  (4332416 and 4333440)   diff = 1024     Avg=9255
+NULL    (0 and 0)               diff = 0        Avg=9795
 
