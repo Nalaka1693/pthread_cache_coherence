@@ -12,28 +12,6 @@ u64     (6297024 and 6297028)   diff = 4        Avg=15974
 NULL    (0 and 0)               diff = 0    Avg=11886
 
 arr =========================
-at4     (6300032 and 6300036)   diff = 4        Avg=12972
-at8     (6304128 and 6304136)   diff = 8        Avg=12799
-at16    (6308224 and 6308240)   diff = 16       Avg=13238
-at32    (6312320 and 6312352)   diff = 32       Avg=13191
-at64    (6316416 and 6316480)   diff = 64       Avg=12229
-at128   (6320512 and 6320640)   diff = 128      Avg=12445
-at256   (6324608 and 6324864)   diff = 256      Avg=13004
-at512   (6328704 and 6329216)   diff = 512      Avg=12646
-at1024  (6332800 and 6333824)   diff = 1024     Avg=12890
-NULL    (0 and 0)               diff = 0        Avg=10962
-
-at4     (6340992 and 6340996)   diff = 4        Avg=14798
-at8     (6345088 and 6345096)   diff = 8        Avg=14686
-at16    (6349184 and 6349200)   diff = 16       Avg=14073
-at32    (6353280 and 6353312)   diff = 32       Avg=14517
-at64    (6357376 and 6357440)   diff = 64       Avg=12983
-at128   (6361472 and 6361600)   diff = 128      Avg=13368
-at256   (6365568 and 6365824)   diff = 256      Avg=13083
-at512   (6369664 and 6370176)   diff = 512      Avg=13430
-at1024  (6373760 and 6374784)   diff = 1024     Avg=13363
-NULL    (0 and 0)               diff = 0        Avg=11517
-
 at4     (6381952 and 6381956)   diff = 4        Avg=15256
 at8     (6386048 and 6386056)   diff = 8        Avg=14549
 at16    (6390144 and 6390160)   diff = 16       Avg=14914
