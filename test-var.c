@@ -26,7 +26,7 @@ int at256_2 __attribute__ ((aligned(256)));
 int u32[2] __attribute__ ((aligned(32)));
 int u64[2] __attribute__ ((aligned(64)));
 
-const char *align[11] = {"at", "at4", "at8", "at16", "at32", "at64", "at128", "at256", "u32", "u64", "NULL"};
+const char *align[11] = {"at  ", "at4 ", "at8 ", "at16", "at32", "at64", "at128", "at256", "u32 ", "u64 ", "NULL"};
 int *var_array[] = {&at_1, &at_2,
                     &at4_1, &at4_2,
                     &at8_1, &at8_2,

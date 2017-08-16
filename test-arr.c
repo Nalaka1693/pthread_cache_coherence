@@ -9,16 +9,16 @@
 const char *align[11] = {"at4 ", "at8 ", "at16", "at32", "at64", "at128", "at256", "at512", "at1024", "at2048", "NULL"};
 int var_array32[10][1024] __attribute__ ((aligned(32)));
 int var_array64[10][1024] __attribute__ ((aligned(64)));
-int var_array128[10][1024] __attribute__ ((aligned(128)));
+int var_array1024[10][1024] __attribute__ ((aligned(1024)));
 
 int get_time(int [][1024]);
 void main_pthread(int *, int *);
 void *counting_thread(void *);
 
 int main() {
-    get_time(var_array32);
-    get_time(var_array64);
-    get_time(var_array128);
+//    get_time(var_array32);
+//    get_time(var_array64);
+    get_time(var_array1024);
 
     return 0;
 }
@@ -47,7 +47,7 @@ int get_time(int arr[][1024]) {
         if (gettimeofday(&end, &z)) goto error_exit;
         total += GET_US(end) - GET_US(start);
     }
-    printf("%s\t(%d and %d)\t\tdiff = %d\tAvg=%ld\n", align[10], 0, 0, 0, total / j);
+    printf("%s\t(%d and %d)\t\t\tdiff = %d\tAvg=%ld\n", align[10], 0, 0, 0, total / j);
 
     return 0;
 
