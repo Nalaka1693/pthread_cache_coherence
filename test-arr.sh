@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-gcc -w -o testa test-arr.c
+gcc -w -o testa test-arr.c -lpthread
 unamestr=`uname`
 if [[ "$unamestr" == 'Linux' ]]; then
    ./testa
