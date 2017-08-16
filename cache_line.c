@@ -20,14 +20,14 @@ int main() {
 
     int i = 1, j = 0, max_diff = 0;
     for (i = 0; i < SIZE-1; i++) {
-        int diff = abs(exe_time[1][i] - exe_time[1][i + 1]);
+        int diff = abs(exe_time[1][i] - exe_time[1][i+1]);
         if (diff > max_diff) {
             max_diff = diff;
             j = i;
         }
     }
 
-    printf("Cache line size = %d bytes\n", exe_time[0][++j]);
+    printf("\nCache line size = %d bytes\n", exe_time[0][++j]);
 
     return 0;
 }
