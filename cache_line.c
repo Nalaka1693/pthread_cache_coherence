@@ -27,7 +27,7 @@ int main() {
         }
     }
 
-    printf("\nCache line size = %d bytes\n", exe_time[0][++j]);
+    printf("\nL1d cache line size = %d bytes\n", exe_time[0][++j]);
 
     return 0;
 }
