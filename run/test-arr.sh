@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
-gcc -w -o testv test-var.c -lpthread
+cd ../
+gcc -w -o testa test-arr.c -lpthread
 unamestr=`uname`
 if [[ "$unamestr" == 'Linux' ]]; then
-   ./testv
+   ./testa
     sleep 5
-    rm -rf testv
+    rm -rf testa
 elif [[ "$unamestr" == 'MINGW64_NT-10.0' ]]; then
-    ./testv.exe
+    ./testa.exe
     sleep 5
-    rm -rf testv.exe
+    rm -rf testa.exe
 fi

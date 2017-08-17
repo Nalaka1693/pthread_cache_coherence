@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
-gcc -w -o testa test-arr.c -lpthread
+cd ../
+gcc -w -o cl cache_line.c -lpthread
 unamestr=`uname`
 if [[ "$unamestr" == 'Linux' ]]; then
-   ./testa
+   ./cl
     sleep 5
-    rm -rf testa
+    rm -rf cl
 elif [[ "$unamestr" == 'MINGW64_NT-10.0' ]]; then
-    ./testa.exe
+    ./cl.exe
     sleep 5
-    rm -rf testa.exe
+    rm -rf cl.exe
 fi
