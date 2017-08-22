@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 cd ../
-gcc -w -o testv test-var.c -lpthread
+gcc -o testv test-var.c -lpthread
 unamestr=`uname`
 if [[ "$unamestr" == 'Linux' ]]; then
    ./testv

@@ -1,5 +1,7 @@
 #include <sys/time.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
 #include <pthread.h>
 
 #define GET_US(X) (X.tv_sec * 1000000 + X.tv_usec)
@@ -55,8 +57,8 @@ int main() {
             if (gettimeofday(&end, &z)) goto error_exit;
             total += GET_US(end) - GET_US(start);
         }
-        printf("%s\t(%d and %d)\tdiff = %d\tAvg=%ld\n", align[i++],
-               (int) var_array[k], (int) var_array[k+1], (int) var_array[k+1] - (int) var_array[k], total / j);
+        printf("%s\t(%p and %p)\tdiff = %d\tAvg=%ld\n", align[i++],
+               var_array[k], var_array[k+1], (uintptr_t) var_array[k+1] - (uintptr_t) var_array[k], total / j);
     }
 
     return 0;

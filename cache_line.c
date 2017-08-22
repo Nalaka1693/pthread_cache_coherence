@@ -1,6 +1,7 @@
 #include <sys/time.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
 #include <pthread.h>
 
 #define GET_US(X) (X.tv_sec * 1000000 + X.tv_usec)
@@ -47,8 +48,8 @@ int get_time(int arr[][1024]) {
         }
         exe_time[0][k] = a * 4;
         exe_time[1][k] = total / ITE;
-        printf("%d\t- (%d and %d)\tdiff = %d\tAvg=%ld\n", exe_time[0][k],
-               (int) &arr[k][0], (int) &arr[k][a], (int) &arr[k][a] - (int) &arr[k][0], exe_time[1][k]);
+        printf("%d\t- (%p and %p)\tdiff = %d\tAvg=%ld\n", exe_time[0][k],
+               &arr[k][0], &arr[k][a], (uintptr_t) &arr[k][a] - (uintptr_t) &arr[k][0], exe_time[1][k]);
         a = a * 2;
     }
 
@@ -60,7 +61,7 @@ int get_time(int arr[][1024]) {
     }
     exe_time[0][SIZE-1] = 0;
     exe_time[1][SIZE-1] = total / ITE;
-    printf("%s\t- (%d and %d)\t\tdiff = %d\tAvg=%ld\n", "NULL", 0, 0, 0, exe_time[1][SIZE-1]);
+    printf("%s\t- (%d and %d)\t\t\t\t\t\t\t\tdiff = %d\tAvg=%ld\n", "NULL", 0, 0, 0, exe_time[1][SIZE-1]);
 
     return 0;
 

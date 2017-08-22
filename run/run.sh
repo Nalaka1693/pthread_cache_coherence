@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 cd ../
-gcc -w -o cl cache_line.c -lpthread
+gcc -o cl cache_line.c -lpthread
 unamestr=`uname`
 if [[ "$unamestr" == 'Linux' ]]; then
    ./cl
