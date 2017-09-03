@@ -9,7 +9,7 @@
 #define MAX 3000000
 #define SIZE 9
 
-int exe_time[2][SIZE] = {};
+long int exe_time[2][SIZE] = {};
 int var_array1024[SIZE][1024] __attribute__ ((aligned(1024)));
 
 int get_time(int [][1024]);
@@ -48,7 +48,7 @@ int get_time(int arr[][1024]) {
         }
         exe_time[0][k] = a * 4;
         exe_time[1][k] = total / ITE;
-        printf("%d\t- (%p and %p)\tdiff = %d\tAvg=%ld\n", exe_time[0][k],
+        printf("%ld\t- (%p and %p)\tdiff = %d\tAvg=%ld\n", exe_time[0][k],
                &arr[k][0], &arr[k][a], (uintptr_t) &arr[k][a] - (uintptr_t) &arr[k][0], exe_time[1][k]);
         a = a * 2;
     }
